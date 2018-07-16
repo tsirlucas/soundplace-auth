@@ -46,7 +46,7 @@ jobs:
           command: gcloud container clusters get-credentials soundplace --zone us-central1-b --project soundplace-infra
       - run:
           name: Rolling update pods
-          command: kubectl rolling-update data-auth-pod --image=tsirlucas/soundplace-auth:${CIRCLE_TAG} --image-pull-policy=Always
+          command: kubectl rolling-update auth-api-pod --image=tsirlucas/soundplace-auth:${CIRCLE_TAG} --image-pull-policy=Always
 workflows:
   version: 2
   release:
