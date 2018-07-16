@@ -7,7 +7,7 @@ export class SpotifyAuthService {
 
   private endpoint = 'https://accounts.spotify.com';
   private scope = 'user-read-private user-read-email user-read-birthdate user-follow-read';
-  private redirectUri = `${environment.settings.apiUrl}/data/auth/spotify/token`;
+  private redirectUri = `${environment.settings.apiUrl}/auth/spotify/token`;
   private clientId = environment.secrets.spotifyId;
   private clientSecret = environment.secrets.spotifySecret;
   private clientUrl = `${environment.settings.clientUrl}/#`;
