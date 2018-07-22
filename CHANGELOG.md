@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.5...v1.1.6) (2018-07-22)
+
+
+### Bug Fixes
+
+* **dockerfile:** add JWT_SECRET arg ([0e5081e](https://github.com/tsirlucas/soundplace-auth/commit/0e5081e))
+
 ## [1.1.5](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.4...v1.1.5) (2018-07-22)
 
 
