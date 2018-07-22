@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/tsirlucas/soundplace-auth/compare/v1.0.4...v1.1.0) (2018-07-22)
+
+
+### Features
+
+* **jwt:** new own jwt authentication and spotify refresh token logics ([693ff3b](https://github.com/tsirlucas/soundplace-auth/commit/693ff3b))
+
 ## [1.0.4](https://github.com/tsirlucas/soundplace-auth/compare/v1.0.3...v1.0.4) (2018-07-16)
 
 
