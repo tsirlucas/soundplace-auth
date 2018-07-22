@@ -1,20 +1,17 @@
-import {execFile, ExecFileOptions} from 'child_process';
 import {environment} from 'config';
+import {writeFile} from 'fs';
+import {promisify} from 'util';
 
 import app from 'src';
+
+const fs_writeFile = promisify(writeFile);
 
 interface AddressInfoWithPort {
   port: number;
 }
 
-execFile(
-  'bash',
-  ['scripts/mount_pg_secrets.sh', environment.secrets.dbPem] as ExecFileOptions,
-  (error: Error | null) => {
-    if (error) {
-      console.log(error);
-      throw error;
-    }
+fs_writeFile('postgres.pem', environment.secrets.dbPem)
+  .then(() => {
     const httpServer = app.listen(process.env.PORT || 3003, (error: Error) => {
       if (error) {
         console.error(error);
@@ -27,5 +24,7 @@ execFile(
         );
       }
     });
-  },
-);
+  })
+  .catch((error: Error) => {
+    console.log(error);
+  });

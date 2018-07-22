@@ -12,7 +12,7 @@ export class DBConnection {
       user: environment.secrets.dbUser,
       password: environment.secrets.dbPassword,
       ssl: {
-        ca: '.pgSecrets/postgresql.pem',
+        ca: 'postgresql.pem',
       },
     });
   }

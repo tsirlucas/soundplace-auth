@@ -5,4 +5,4 @@ node_modules/
 .history/
 
 .env
-.pgSecrets
+postgres.pem
