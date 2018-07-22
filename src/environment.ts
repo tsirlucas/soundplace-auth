@@ -11,7 +11,6 @@ const secrets = {
   spotifyId: process.env.SPOTIFY_ID,
   spotifySecret: process.env.SPOTIFY_SECRET,
   jwtSecret: process.env.JWT_SECRET,
-  dbPem: process.env.DATABASE_PEM,
   dbUser: process.env.DATABASE_USER,
   dbPassword: process.env.DATABASE_PASSWORD,
 };
