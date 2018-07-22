@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.0...v1.1.1) (2018-07-22)
+
+
+### Bug Fixes
+
+* **dbPem:** remove unused dbPem ([0c64557](https://github.com/tsirlucas/soundplace-auth/commit/0c64557))
+
 # [1.1.0](https://github.com/tsirlucas/soundplace-auth/compare/v1.0.4...v1.1.0) (2018-07-22)
 
 
