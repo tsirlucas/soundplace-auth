@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.7...v1.1.8) (2018-07-22)
+
+
+### Bug Fixes
+
+* **env:** some env fixes ([a50b3a0](https://github.com/tsirlucas/soundplace-auth/commit/a50b3a0))
+
 ## [1.1.7](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.6...v1.1.7) (2018-07-22)
 
 
