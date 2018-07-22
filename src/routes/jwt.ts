@@ -3,6 +3,6 @@ import {Router} from 'express';
 
 export const jwtRouter = Router();
 
-jwtRouter.get('/authenticate', JWTAuthController.getInstance().authenticate);
-
-jwtRouter.get('/verify', JWTAuthController.getInstance().verifyToken);
+jwtRouter
+  .get('/authenticate', JWTAuthController.getInstance().authenticate)
+  .get('/verify', JWTAuthController.getInstance().verifyToken);

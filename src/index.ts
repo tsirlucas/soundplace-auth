@@ -4,13 +4,10 @@ import {jwtRouter, spotifyRouter} from 'routes';
 
 const app = express();
 
-app.use(cors());
-
-app.options('*', cors());
-
-// Routes
-
-app.use('/spotify', spotifyRouter);
-app.use('/jwt', jwtRouter);
+app
+  .use(cors())
+  .options('*', cors())
+  .use('/spotify', spotifyRouter)
+  .use('/jwt', jwtRouter);
 
 export default app;

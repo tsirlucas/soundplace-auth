@@ -13,6 +13,7 @@ const secrets = {
   jwtSecret: process.env.JWT_SECRET,
   dbUser: process.env.DATABASE_USER,
   dbPassword: process.env.DATABASE_PASSWORD,
+  dbPem: process.env.DATABASE_PEM,
 };
 
 export const environment = {
