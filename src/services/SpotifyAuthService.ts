@@ -10,7 +10,6 @@ export class SpotifyAuthService {
   private redirectUri = `${environment.settings.apiUrl}/auth/spotify/token`;
   private clientId = environment.secrets.spotifyId;
   private clientSecret = environment.secrets.spotifySecret;
-  private clientUrl = `${environment.settings.clientUrl}/#`;
 
   private axiosInstance: AxiosInstance;
 
@@ -40,6 +39,25 @@ export class SpotifyAuthService {
     );
   }
 
+  public async getRefreshedToken(refreshToken: string) {
+    try {
+      const {data} = await this.axiosInstance.post('/api/token', null, {
+        params: {
+          refresh_token: refreshToken,
+          grant_type: 'refresh_token',
+        },
+        headers: {
+          Authorization:
+            'Basic ' + Buffer.from(`${this.clientId}:${this.clientSecret}`).toString('base64'),
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+
+      return data.access_token;
+    } catch (e) {
+      throw e;
+    }
+  }
   public async getTokenizedUrl(code: string) {
     try {
       const result = await this.axiosInstance.post('/api/token', null, {
@@ -55,13 +73,18 @@ export class SpotifyAuthService {
         },
       });
 
-      return (
-        `${this.clientUrl}/login?` +
-        queryString.stringify({
-          access_token: result.data.access_token,
-          expires_in: result.data.expires_in,
-        })
-      );
+      const {data} = await axios.get('https://api.spotify.com/v1/me?fields=id', {
+        headers: {
+          Authorization: `${result.data.token_type} ${result.data.access_token}`,
+          Accept: 'application/json',
+        },
+      });
+
+      return queryString.stringify({
+        user_id: data.id,
+        access_token: result.data.access_token,
+        refresh_token: result.data.refresh_token,
+      });
     } catch (e) {
       throw e;
     }
