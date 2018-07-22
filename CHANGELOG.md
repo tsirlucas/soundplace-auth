@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.3...v1.1.4) (2018-07-22)
+
+
+### Bug Fixes
+
+* **dbPem:** send pem on ssl settings ([cd16304](https://github.com/tsirlucas/soundplace-auth/commit/cd16304))
+
 ## [1.1.3](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.2...v1.1.3) (2018-07-22)
 
 
