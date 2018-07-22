@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.4...v1.1.5) (2018-07-22)
+
+
+### Bug Fixes
+
+* **dbPem:** fix dbPem write strategy ([e53bd3b](https://github.com/tsirlucas/soundplace-auth/commit/e53bd3b))
+
 ## [1.1.4](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.3...v1.1.4) (2018-07-22)
 
 
