@@ -1,3 +1,4 @@
+import {SpotifyAuth} from 'db';
 import {Request, Response} from 'express';
 
 import {SpotifyAuthService} from 'services';
@@ -18,6 +19,14 @@ export class SpotifyAuthController {
   }
 
   public async getTokenizedUrl({query}: Request, res: Response) {
-    res.redirect(await SpotifyAuthService.getInstance().getTokenizedUrl(query.code));
+    const params = await SpotifyAuthService.getInstance().getTokenizedUrl(query.code);
+    res.redirect(`../jwt/authenticate?` + params);
+  }
+
+  public async refreshToken({query}: Request, res: Response) {
+    const creds = await SpotifyAuth.getInstance().getRefreshToken(query.userId);
+    const newToken = await SpotifyAuthService.getInstance().getRefreshedToken(creds.refresh_token);
+    await SpotifyAuth.getInstance().setToken(query.userId, newToken);
+    res.send(newToken);
   }
 }
