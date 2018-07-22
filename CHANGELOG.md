@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.2...v1.1.3) (2018-07-22)
+
+
+### Bug Fixes
+
+* **dockerfile:** add jwt_secret to dockerfile ([828d2f5](https://github.com/tsirlucas/soundplace-auth/commit/828d2f5))
+
 ## [1.1.2](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.1...v1.1.2) (2018-07-22)
 
 
