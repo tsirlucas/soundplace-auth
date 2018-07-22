@@ -5,4 +5,4 @@ node_modules/
 .history/
 
 .env
-postgres.pem
+postgresql.pem
