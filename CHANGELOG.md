@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.6...v1.1.7) (2018-07-22)
+
+
+### Bug Fixes
+
+* **pem:** fix file name ([db40ff9](https://github.com/tsirlucas/soundplace-auth/commit/db40ff9))
+
 ## [1.1.6](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.5...v1.1.6) (2018-07-22)
 
 
