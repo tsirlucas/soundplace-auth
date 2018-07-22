@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.1...v1.1.2) (2018-07-22)
+
+
+### Bug Fixes
+
+* **secrets:** put jwt secrets on image ([f213564](https://github.com/tsirlucas/soundplace-auth/commit/f213564))
+
 ## [1.1.1](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.0...v1.1.1) (2018-07-22)
 
 
