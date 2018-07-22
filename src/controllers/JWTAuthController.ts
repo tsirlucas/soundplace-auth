@@ -27,10 +27,9 @@ export class JWTAuthController {
         authorization as string,
         environment.secrets.jwtSecret as string,
       ) as UserCred;
-
       res.send({userId: decoded.user_id});
-    } catch (err) {
-      res.send(err);
+    } catch (error) {
+      res.status(401).send({error});
     }
   }
 }
