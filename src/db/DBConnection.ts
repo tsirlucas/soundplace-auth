@@ -6,7 +6,7 @@ export class DBConnection {
   private pool: Pool;
 
   private constructor() {
-    this.pool = new Pool({
+    const config = {
       host: environment.settings.dbEndpoint,
       database: environment.settings.dbName,
       user: environment.secrets.dbUser,
@@ -14,7 +14,13 @@ export class DBConnection {
       ssl: {
         ca: 'postgresql.pem',
       },
-    });
+    };
+
+    if (process.env.NODE_ENV === 'development') {
+      delete config.ssl;
+    }
+
+    this.pool = new Pool(config);
   }
 
   static getInstance() {
