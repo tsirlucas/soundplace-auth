@@ -8,8 +8,8 @@ const commonvars = {
 };
 
 const secrets = {
-  spotifyId: process.env.SPOTIFY_ID,
-  spotifySecret: process.env.SPOTIFY_SECRET,
+  youtubeId: process.env.YOUTUBE_ID,
+  youtubeSecret: process.env.YOUTUBE_SECRET,
   jwtSecret: process.env.JWT_SECRET,
   dbUser: process.env.DATABASE_USER,
   dbPassword: process.env.DATABASE_PASSWORD,

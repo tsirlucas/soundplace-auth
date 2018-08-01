@@ -1,1 +1,1 @@
-export * from './SpotifyAuthService';
+export * from './YoutubeAuthService';

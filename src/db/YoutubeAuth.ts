@@ -6,12 +6,12 @@ export type UserCred = {
   refresh_token: string;
 };
 
-export class SpotifyAuth {
-  private static instance: SpotifyAuth;
+export class YoutubeAuth {
+  private static instance: YoutubeAuth;
 
   static getInstance() {
     if (!this.instance) {
-      this.instance = new SpotifyAuth();
+      this.instance = new YoutubeAuth();
     }
 
     return this.instance;
@@ -19,7 +19,7 @@ export class SpotifyAuth {
 
   public async setCreds(userCred: UserCred) {
     await DBConnection.getInstance().query(
-      'INSERT INTO spotify_auth (user_id, access_token, refresh_token)\
+      'INSERT INTO youtube_auth (user_id, access_token, refresh_token)\
       VALUES ($1, $2, $3)\
       ON CONFLICT (user_id) DO UPDATE\
       SET access_token = excluded.access_token,\
@@ -28,9 +28,9 @@ export class SpotifyAuth {
     );
   }
 
-  public async getRefreshToken(userId: string) {
+  public async getCreds(userId: string) {
     const {rows} = await DBConnection.getInstance().query(
-      'SELECT refresh_token FROM spotify_auth WHERE user_id=$1',
+      'SELECT access_token, refresh_token FROM youtube_auth WHERE user_id=$1',
       [userId],
     );
     return rows[0];
@@ -38,7 +38,7 @@ export class SpotifyAuth {
 
   public async setToken(userId: string, newToken: string) {
     await DBConnection.getInstance().query(
-      'UPDATE spotify_auth SET access_token=$2 WHERE user_id=$1',
+      'UPDATE youtube_auth SET access_token=$2 WHERE user_id=$1',
       [userId, newToken],
     );
   }

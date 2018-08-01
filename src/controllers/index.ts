@@ -1,2 +1,2 @@
-export * from './SpotifyAuthController';
+export * from './YoutubeAuthController';
 export * from './JWTAuthController';
