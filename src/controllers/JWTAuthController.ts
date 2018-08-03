@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {environment} from 'config';
 import {UserCred, YoutubeAuth} from 'db';
 import {Request, Response} from 'express';
@@ -16,8 +17,17 @@ export class JWTAuthController {
 
   public async authenticate({query}: Request, res: Response) {
     var token = jwt.sign({user_id: query.user_id}, environment.secrets.jwtSecret as Secret);
+    const creds = await YoutubeAuth.getInstance().getCreds(query.user_id);
+    const isFirstAuth = !creds;
     await YoutubeAuth.getInstance().setCreds(query);
     res.redirect(`${environment.settings.clientUrl}/#/login?token=${token}`);
+    if (isFirstAuth) {
+      axios.get(`${environment.settings.apiUrl}/data/import`, {
+        headers: {
+          Authorization: token,
+        },
+      });
+    }
   }
 
   public async verifyToken(req: Request, res: Response) {
