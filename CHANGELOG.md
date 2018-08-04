@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.9...v1.2.0) (2018-08-04)
+
+
+### Features
+
+* **import:** calling import on users first auth ([e789689](https://github.com/tsirlucas/soundplace-auth/commit/e789689))
+
 ## [1.1.9](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.8...v1.1.9) (2018-07-22)
 
 
