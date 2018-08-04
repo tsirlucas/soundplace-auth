@@ -1,13 +1,13 @@
 import cors from 'cors';
 import express from 'express';
-import {jwtRouter, spotifyRouter} from 'routes';
+import {jwtRouter, youtubeRouter} from 'routes';
 
 const app = express();
 
 app
   .use(cors())
   .options('*', cors())
-  .use('/spotify', spotifyRouter)
+  .use('/youtube', youtubeRouter)
   .use('/jwt', jwtRouter);
 
 export default app;
