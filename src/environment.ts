@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const commonvars = {
   apiUrl: process.env.API_URL,
+  dataApiUrl: process.env.DATA_API_ENDPOINT,
   clientUrl: process.env.CLIENT_URL,
   dbEndpoint: process.env.DATABASE_ENDPOINT,
   dbName: process.env.DATABASE_NAME,

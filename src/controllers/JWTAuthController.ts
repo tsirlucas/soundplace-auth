@@ -22,11 +22,13 @@ export class JWTAuthController {
     await YoutubeAuth.getInstance().setCreds(query);
     res.redirect(`${environment.settings.clientUrl}/#/login?token=${token}`);
     if (isFirstAuth) {
-      axios.get(`${environment.settings.apiUrl}/data/import`, {
-        headers: {
-          Authorization: token,
-        },
-      });
+      axios
+        .get(`${environment.settings.dataApiUrl}/import`, {
+          headers: {
+            Authorization: token,
+          },
+        })
+        .then(() => console.log('User data imported!'));
     }
   }
 
