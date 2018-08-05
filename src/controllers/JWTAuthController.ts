@@ -28,7 +28,8 @@ export class JWTAuthController {
             Authorization: token,
           },
         })
-        .then(() => console.log('User data imported!'));
+        .then(() => console.log('User data imported!'))
+        .catch((e) => console.log(e));
     }
   }
 
