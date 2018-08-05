@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/tsirlucas/soundplace-auth/compare/v1.2.0...v1.2.1) (2018-08-05)
+
+
+### Bug Fixes
+
+* **endpoint:** use local data api endpoint to fetch import ([470a75c](https://github.com/tsirlucas/soundplace-auth/commit/470a75c))
+
 # [1.2.0](https://github.com/tsirlucas/soundplace-auth/compare/v1.1.9...v1.2.0) (2018-08-04)
 
 
