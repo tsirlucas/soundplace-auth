@@ -31,7 +31,7 @@ export class JWTAuthController {
         .catch((e) => console.log(e));
     }
 
-    res.redirect(`${environment.settings.clientUrl}/#/login?token=${token}`);
+    res.redirect(`${environment.settings.clientUrl}/#/callback?token=${token}`);
   }
 
   public async verifyToken(req: Request, res: Response) {
