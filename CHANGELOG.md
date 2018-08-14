@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/tsirlucas/soundplace-auth/compare/v1.2.2...v1.2.3) (2018-08-05)
+
+
+### Bug Fixes
+
+* **import:** add http to import url ([9ed653c](https://github.com/tsirlucas/soundplace-auth/commit/9ed653c))
+
 ## [1.2.2](https://github.com/tsirlucas/soundplace-auth/compare/v1.2.1...v1.2.2) (2018-08-05)
 
 
