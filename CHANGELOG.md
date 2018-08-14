@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/tsirlucas/soundplace-auth/compare/v1.2.4...v1.2.5) (2018-08-14)
+
+
+### Bug Fixes
+
+* **deploy:** remove cat step ([fcee835](https://github.com/tsirlucas/soundplace-auth/commit/fcee835))
+
 ## [1.2.4](https://github.com/tsirlucas/soundplace-auth/compare/v1.2.3...v1.2.4) (2018-08-14)
 
 
