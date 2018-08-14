@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/tsirlucas/soundplace-auth/compare/v1.2.3...v1.2.4) (2018-08-14)
+
+
+### Bug Fixes
+
+* **auth:** fix callback url ([c473aa0](https://github.com/tsirlucas/soundplace-auth/commit/c473aa0))
+
 ## [1.2.3](https://github.com/tsirlucas/soundplace-auth/compare/v1.2.2...v1.2.3) (2018-08-05)
 
 
