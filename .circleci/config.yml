@@ -36,9 +36,6 @@ jobs:
           name: Set gcloud credentials
           command: mkdir .gcloud-secrets && echo "$GCLOUD_AUTH" >> .gcloud-secrets/gcloud_auth.json
       - run:
-          name: cat
-          command: cat .gcloud-secrets/gcloud_auth.json
-      - run:
           name: Gcloud login
           command: gcloud auth activate-service-account --key-file .gcloud-secrets/gcloud_auth.json
       - run:
